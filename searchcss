@@ -1,0 +1,70 @@
+/* Style elements for Search Section */
+
+
+.searchform{
+	margin-top: 25px;
+	margin-left: 20px;
+}
+.dsrchrslt{
+	margin-top : 50px;
+	border-top: 1px solid black;
+	border-bottom : 1px solid black;
+	line-height: 1px;
+	
+	
+	
+}
+.dsglerslt{
+	
+	border-bottom : 1px solid black;
+	line-height: 20px;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.psrchrslt{
+	margin-left:80px;
+}
+.hsrchrslt{
+	margin-left:120px;
+}
+.searchBtn{
+	margin-top: 25px;
+	margin-left: 130px;
+}
+
+.labelinput {
+   float:left;margin-right:20px;
+    
+}
+
+.inputcl {
+	
+	margin-left:50px;
+}
+.inputtp{
+	margin-top :10px;
+	margin-left:30px;
+}
+label {
+    display:block;
+}
+.btndiv{
+    display: inline;
+    
+}
+
+.react-datepicker-wrapper{
+    display: inline;
+   
+}
+

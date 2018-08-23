@@ -1,0 +1,11 @@
+{
+"compilerOptions": {
+  "module": "commonjs",
+  "allowSyntheticDefaultImports": true,
+  "preserveConstEnums": true,
+  "target": "es5",
+  "jsx": "react",
+  "sourceMap": true,
+  "esModuleInterop": true
+}
+}

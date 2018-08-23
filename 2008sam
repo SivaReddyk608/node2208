@@ -1,0 +1,98 @@
+{
+    "$schema": "../schema/layout.schema.json",
+    "name" : "passThrough",
+    "description": "Mortgage Backed and Pass Through securities",
+    "views": [
+        {
+            "name": "IND DATA",
+            "description": "Indicative Data",
+            "header": "{security.longName}",
+            "subHeader": {
+                "title": ["{security.dealType}, {security.currency}","CUSIP {security.cusip}"],
+                "justification": "between"
+            },
+            "sections": [
+                {
+                    "name": "description",
+                    "header": "Description",
+                    "columns": 2,
+                    "content": [
+                        {"label": "WAC", "field": "security.weightedAverageCoupon"},
+                        {"label": "WAM", "field":"security.weightedAverageMaturity"},
+                        {"label": "WALA", "field": "security.weightedAverageLoanAge"},
+                        {"label": "Agency", "field": "security.agencyTicker"},
+                        {"label": "Term", "field": "security.term"},
+                        {"label": "Issue Date", "field": "security.issueDate", "fieldType": "date"},
+                        {"label": "Maturity Date", "field": "security.maturityDate", "fieldType": "date"}
+                    ]
+                },
+                {
+                    "name": "coupon",
+                    "header": "Coupon",
+                    "columns": 1,
+                    "content": [
+                        {"label": "Coupon", "field": "security.coupon"},
+                        {"label": "Coupon Type", "field": "security.couponType"},
+                        {"label": "Frequency", "field": "security.couponFrequency"}
+                    ]
+                },
+                {
+                    "name": "identifiers",
+                    "header": "Identifiers",
+                    "columns": 1,
+                    "content": [
+                        {"label": "ISIN", "field": "security.isin"},
+                        {"label": "CUSIP", "field": "security.cusip"}
+                    ]
+                },
+                {
+                    "name": "underlying",
+                    "header": "Underlying",
+                    "columns": 1,
+                    "content": [
+                        {"label": "Orig Balance", "field": "security.origOutstanding"},
+                        {"label": "Outstanding", "field": "security.outstanding"},
+                        {"label": "Factor", "field": "security.factor"}
+                    ]
+                },
+                {
+                    "name": "characteristics",
+                    "header": "Characteristics",
+                    "columns": 1,
+                    "content": [
+                        {"label": "Wtd Avg Loan Bal", "field": "calculated.weightedAverageLoanBalance"},
+                        {"label": "Max Loan Bal", "field": "calculated.maxLoanBalance"},
+                        {"label": "LTV", "field": "calculated.ltv"},
+                        {"label": "FICO", "field": "calculated.fico"},
+                        {"label": "Geo", "field": "calculated.geo"}
+                    ]
+                },
+                {
+                    "name": "historicalSpeeds",
+                    "header": "Historical Speeds",
+                    "columns": 1,
+                    "content": [
+                        {"label": "1 Month", "field": "calculated.1mo"},
+                        {"label": "3 Months", "field": "calculated.3mo"},
+                        {"label": "6 CPR", "field": "calculated.6cpr"},
+                        {"label": "LT CPR", "field": "calculated.ltcpr"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PAR/YIELD",
+            "description": "Par and yield data",
+            "sections": [
+                
+            ]
+        },
+        {
+            "name": "CASHFLOW",
+            "description": "Cashflow data",
+            "sections": [
+                
+            ]
+        }
+    ]
+}

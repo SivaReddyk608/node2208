@@ -1,0 +1,69 @@
+{
+    "$schema": "../schema/layout.schema.json",
+    "name" : "abs",
+    "description": "Agency Backed Security",
+    "views": [
+        {
+            "name": "IND DATA",
+            "description": "Indicative Data",
+            "header": "{security.longName}",
+            "subHeader": {
+                "title": ["{security.dealType}, {security.currency}","CUSIP {security.cusip}"],
+                "justification": "between"
+            },
+            "headerDataItems": ["security.dealType","security.longName","security.currency", "security.cusip"],
+            "sections": [
+                {
+                    "name": "dealDescription",
+                    "header": "Deal Description",
+                    "columns": 2,
+                    "content": [
+                        {"label": "Deal Type", "field": "security.dealType"},
+                        {"label": "Deal Prosp. Series", "field": "calculated.dealProspSeries"},
+                        {"label": "Series", "field": "security.series"},
+                        {"label": "Tranche", "field": "security.tranche"},
+                        {"label": "Currency", "field": "security.currency"},
+                        {"label": "Country", "field": "security.country"},
+                        {"label": "Day Count", "field": "calculated.dayCount"},
+                        {"label": "Deal Amt Iss", "field": "security.dealAmountIssuedTotal"},
+                        {"label": "Orig Balance", "field": "security.origOutstanding"},
+                        {"label": "Outstanding", "field": "security.outstanding"},
+                        {"label": "Factor", "field": "security.factor"},
+                        {"label": "WAM", "field": "security.weightedAverageMaturity"},
+                        {"label": "WAC", "field": "security.weightedAverageCoupon"},
+                        {"label": "WALA", "field": "security.weightedAverageLoanAge"}
+                    ]
+                },
+                {
+                    "name": "identifiers",
+                    "header": "Identifiers",
+                    "columns": 1,
+                    "content": [
+                        {"label": "Ticker", "field": "security.ticker"},
+                        {"label": "ISIN", "field": "security.isin"},
+                        {"label": "CUSIP", "field": "security.cusip"}
+                    ]
+                },
+                {
+                    "name": "coupon",
+                    "header": "Coupon",
+                    "columns": 1,
+                    "content": [
+                        {"label": "Coupon", "field": "security.coupon"},
+                        {"label": "Coupon Type", "field": "security.couponType"},
+                        {"label": "Frequency", "field": "security.couponFrequency"},
+                        {"label": "First Coupon", "field": "security.firstCouponDate", "fieldType": "date"}
+                    ]
+                },
+                {
+                    "name": "ratings",
+                    "header": "Ratings",
+                    "columns": 1,
+                    "content": [
+                        {"label": "Moody Issue", "field": "security.ratingMoodys"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

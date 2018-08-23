@@ -1,0 +1,35 @@
+export interface ViewTemplate {
+	name: string;
+	description: string;
+	views: View[];
+}
+
+export interface View {
+	name: string;
+	description: string;
+	header: Header;
+	subHeader: Header;
+	sections: Section[];
+}
+
+export interface Content {
+	label: string;
+	field: string;
+}
+
+export interface Section {
+	name: string;
+	header: string;
+	columns: number;
+	content: Content[];
+}
+
+export interface ComplexHeader {
+    title: string[];
+	justification: string;
+}
+
+export type SimpleHeader = string;
+
+export type Header = ComplexHeader | SimpleHeader;
+

@@ -1,0 +1,73 @@
+{status: "success", data: {data: {security: {assetType: "CMO",…}, riskserver: {}, calculated: {}},…}}
+data
+:
+{data: {security: {assetType: "CMO",…}, riskserver: {}, calculated: {}},…}
+data
+:
+{security: {assetType: "CMO",…}, riskserver: {}, calculated: {}}
+layout
+:
+{name: "cmo", description: "Collateralized Mortgage Obligation",…}
+description
+:
+"Collateralized Mortgage Obligation"
+name
+:
+"cmo"
+test
+:
+null
+views
+:
+[{name: "IND DATA", description: "Indicative Data",…}]
+0
+:
+{name: "IND DATA", description: "Indicative Data",…}
+description
+:
+"Indicative Data"
+header
+:
+{style: null, justification: null, title: ["{{security.longName}}"]}
+justification
+:
+null
+style
+:
+null
+title
+:
+["{{security.longName}}"]
+0
+:
+"{{security.longName}}"
+headerDataItems
+:
+null
+name
+:
+"IND DATA"
+sections
+:
+[,…]
+0
+:
+{name: "dealDescription", header: {style: null, justification: null, title: ["Deal Description"]},…}
+1
+:
+{name: "trancheDescription",…}
+2
+:
+{name: "factor", header: {style: null, justification: null, title: ["Factor"]}, subHeader: null,…}
+3
+:
+{name: "identifiers", header: {style: null, justification: null, title: ["Identifiers"]},…}
+4
+:
+{name: "ratings", header: {style: null, justification: null, title: ["Ratings"]}, subHeader: null,…}
+subHeader
+:
+{style: null, justification: "between",…}
+status
+:
+"success"

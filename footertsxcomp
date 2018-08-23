@@ -1,0 +1,61 @@
+import * as React from 'react';
+import './styles/Footer.css';
+
+export interface Link {
+  Name: string;
+  urllink: string;
+}
+
+const cpRight: Link[] = [
+  {
+    Name: 'LEGAL ',
+    urllink: 'https://www.msci.com/terms-of-use',
+  },
+  {
+    Name: ' PRIVACY NOTICE ',
+    urllink: 'https://www.msci.com/privacy-pledge',
+  },
+  {
+    Name: ' COOKIES ',
+    urllink: 'https://www.msci.com/cookie-policy',
+  },
+  {
+    Name: ' CONTACT US ',
+    urllink: 'https://www.msci.com/contact-us',
+  },
+  {
+    Name: 'SITE MAP',
+    urllink: 'https://www.msci.com/sitemap',
+  },
+];
+
+class Footer extends React.PureComponent {
+  FooterLinks(ftlink: Link) {
+    console.log(ftlink.Name);
+    if (ftlink.Name == 'SITE MAP') {
+      return (
+        <a key={ftlink.Name} className="text-white" href={ftlink.urllink}>
+          {ftlink.Name}
+        </a>
+      );
+    } else {
+      return (
+        <a key={ftlink.Name} className="text-white" href={ftlink.urllink}>
+          {ftlink.Name} |{' '}
+        </a>
+      );
+    }
+  }
+
+  render() {
+    return (
+      <div className="footer bg-dark">
+        <div className="footercp text-white">
+          © Copyright MSCI. All rights reserved
+        </div>
+        <div className="footerlnk ">{cpRight.map(this.FooterLinks)}</div>
+      </div>
+    );
+  }
+}
+export default Footer;

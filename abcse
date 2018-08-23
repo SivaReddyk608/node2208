@@ -1,0 +1,379 @@
+{assetType: "CMO", attributes: {…}}
+assetType
+:
+"CMO"
+attributes
+:
+aifmdSubtype
+:
+"SEC_SSP_CDOC"
+algorithm
+:
+""
+assetType
+:
+"CMO"
+cic
+:
+"XT65"
+country
+:
+"US"
+countryOfRisk
+:
+"US"
+coupon
+:
+"6.0"
+couponFrequency
+:
+"MNTH"
+couponType
+:
+"FIX"
+currency
+:
+"USD"
+cusip
+:
+"021482AA2"
+dealAmountIssuedTotal
+:
+"355107356.0"
+dealAttributeList
+:
+"_I_=S	name=CURRENCY	value=USD	rmxVolSurface=US.USD.ISO	_I_=S	name=INDEX	value=LIBOR_1MO	rmxCurvename=USD Swap"
+dealType
+:
+"CMO - WHLN"
+factor
+:
+"0.186320697337"
+firstCouponDate
+:
+"20080425 00:00:00"
+frtbSecNettingGroup
+:
+"US021482AA27"
+intexAssetType
+:
+"LOAN"
+intexCollateralType
+:
+"ALT_A"
+intexDealCategory
+:
+"LOAN"
+intexDealCountry
+:
+"US"
+intexDealCurrency
+:
+"USD"
+intexDealType
+:
+"WHOLE_LOAN"
+intexMarketCategory
+:
+"RMBS"
+intexTrancheType
+:
+"SEN_SPR_FIX"
+isDeveloped
+:
+"TRUE"
+isFloater
+:
+"FALSE"
+isInterestOnly
+:
+"FALSE"
+isIntexCovered
+:
+"TRUE"
+isInverseFloater
+:
+"FALSE"
+isNonProtocol
+:
+"FALSE"
+isPrincipalOnly
+:
+"FALSE"
+isin
+:
+"US021482AA27"
+issueDate
+:
+"20080301 00:00:00"
+issuerCountryOfDomicile
+:
+"US"
+issuerCountryOfIncorporation
+:
+"US"
+issuerCountryOfRisk
+:
+"US"
+issuerId
+:
+"IID000000002343452"
+issuerLongName
+:
+"CWALT, INC (COUNTRYWIDE ALTERNATIVE LOAN TRUST)"
+issuerName
+:
+"CWALT, INC (COUNTRYWIDE ALTERNATIVE LOAN TRUST)"
+issuerRatingMoodys
+:
+"Baa1"
+issuerRatingMoodysDate
+:
+"20141017 00:00:00"
+issuerRatingMoodysWatchlist
+:
+"OFF"
+issuerShortName
+:
+"CWALT Alternative Loan Trust"
+issuerTicker
+:
+"CWALT"
+issuerType
+:
+"CORP"
+liquiditySurface
+:
+"securitizedProducts_structuredDebtUsCmoNonAgencyHyFixNonIo"
+liquiditySurfaceGroup
+:
+"securitizedProducts"
+longName
+:
+"CWALT, INC (COUNTRYWIDE ALTERNATIVE LOAN TRUST) 6 08/25/2037 082R 1"
+marketStatus
+:
+"ISS"
+maturityDate
+:
+"20370825 00:00:00"
+mdsInstrumentType
+:
+"MDS_STRUCT_DEBT"
+mdsLastUpdate
+:
+"20180725 00:00:00"
+mdsRegion
+:
+"Americas"
+mdsStructuredDebtReferenceInfo
+:
+""
+mdsSubRegion
+:
+"North America"
+mdsUniqueId
+:
+"UDS000000025723427"
+modelSector
+:
+"ABS"
+modelSubSector
+:
+"HOME_EQUITY"
+moodyDebtClass
+:
+"PAS"
+moodySeniority
+:
+"SS"
+name
+:
+"CWALT 6 08/25/2037 082R 1"
+nportAssetType
+:
+"ABS-mortgage backed security"
+nportIssuerType
+:
+"corporate"
+origOutstanding
+:
+"25282000.0"
+outstanding
+:
+"4710559.87007403"
+prepaymentSpeed
+:
+"10.6984"
+prepaymentType
+:
+"CPR"
+priceNodeList
+:
+"_I_=S	priceSpeed=12.2553	askPrice=98.7464692	priceAdjustmentFactor=1.0	accruedInt=0.733333	priceModel=CPR,YD	priceSourceIdent=0x0003f50009126885	quoteType=PRC	bidPrice=98.2464692	midPrice=98.4964692	lastYield=4.5	closeYield=4.5	priceCurrency=USD	mdsUniqueId=UDS000000025723427	priceDateTime=20180813 00:00:00	priceSourceContributor=EJV	priceSource=EJV	ccyAdjustmentFactorCurrency=USD	accruedIntSettleDate=20180815 00:00:00	closePrice=98.2464692	lastPriceDateTime=20180813 00:00:00	isPriceIncludeAccruedInterest=FALSE	ccyAdjustmentFactor=1.0	priceNodeDate=	lastPrice=98.2464692"
+pricingInfo
+:
+""
+ratingBasedSpreadName
+:
+"H0A3.ML.OAS.ADJ"
+ratingMoodys
+:
+"Caa3"
+ratingMoodysDate
+:
+"20110512 00:00:00"
+ratingMoodysDirection
+:
+"DNG"
+ratingMoodysWatchlist
+:
+"OFF"
+ratingMoodysWatchlistDate
+:
+"20110512 00:00:00"
+ratingMoodysWatchlistReason
+:
+"DNG"
+ratingSP
+:
+"NR"
+ratingSPDate
+:
+"20160331 00:00:00"
+secMinimumDaysToLiquidate
+:
+"0"
+secSettlementLength
+:
+"2"
+secTransactionCostLimitAmount
+:
+"1.129"
+secTransactionCostLimitFloor
+:
+"20.0"
+secTransactionCostLimitType
+:
+"multipleOfHalfBidAsk"
+securitizationCreditQuality
+:
+"highYield"
+securitizationNonCtpAssetClass
+:
+"other"
+securitizationNonCtpRegion
+:
+"northAmerica"
+securitizationNonCtpSeniority
+:
+"senior"
+securitizationSector
+:
+"rmbsMidPrime"
+securitizationTranche
+:
+"1A1"
+series
+:
+"082R"
+spDebtType
+:
+"SRSEC"
+ticker
+:
+"CWALT 082R 1A1"
+tranche
+:
+"1A1"
+vendorIdentifierList
+:
+"_I_=S	mdsUniqueId=UDS000000025723427	ident=021482AA2	source=INTEX	_I_=S	mdsUniqueId=UDS000000025723427	ident=0390P8	source=BARRA	_I_=S	mdsUniqueId=UDS000000025723427	ident=0x0003f50009126885	source=EJV	_I_=S	mdsUniqueId=UDS000000025723427	ident=6839369	source=BSEC	_I_=S	mdsUniqueId=UDS000000025723427	ident=CWR0802R-1A1	source=ITXID"
+weightedAverageCoupon
+:
+"6.0"
+weightedAverageMaturity
+:
+"229.0"
+__proto__
+:
+constructor
+:
+ƒ Object()
+hasOwnProperty
+:
+ƒ hasOwnProperty()
+isPrototypeOf
+:
+ƒ isPrototypeOf()
+propertyIsEnumerable
+:
+ƒ propertyIsEnumerable()
+toLocaleString
+:
+ƒ toLocaleString()
+toString
+:
+ƒ toString()
+valueOf
+:
+ƒ valueOf()
+__defineGetter__
+:
+ƒ __defineGetter__()
+__defineSetter__
+:
+ƒ __defineSetter__()
+__lookupGetter__
+:
+ƒ __lookupGetter__()
+__lookupSetter__
+:
+ƒ __lookupSetter__()
+get __proto__
+:
+ƒ __proto__()
+set __proto__
+:
+ƒ __proto__()
+__proto__
+:
+constructor
+:
+ƒ Object()
+hasOwnProperty
+:
+ƒ hasOwnProperty()
+isPrototypeOf
+:
+ƒ isPrototypeOf()
+propertyIsEnumerable
+:
+ƒ propertyIsEnumerable()
+toLocaleString
+:
+ƒ toLocaleString()
+toString
+:
+ƒ toString()
+valueOf
+:
+ƒ valueOf()
+__defineGetter__
+:
+ƒ __defineGetter__()
+__defineSetter__
+:
+ƒ __defineSetter__()
+__lookupGetter__
+:
+ƒ __lookupGetter__()
+__lookupSetter__
+:
+ƒ __lookupSetter__()
+get __proto__
+:
+ƒ __proto__()
+set __proto__
+:
+ƒ __proto__()

@@ -1,0 +1,94 @@
+import React, { Component } from 'react';
+import './App.css';
+import Footer from './components/Footer';
+import SearchSec from './search/SearchSec';
+import Views from './components/ViewsComponent';
+import { IdentifierType} from './types';
+import { ViewData} from './types';
+import axios from 'axios';
+import './main.scss';
+
+interface AppProps {}
+
+interface AppState {
+  searchStr: string;
+  idType: IdentifierType;
+  security?: ViewData;
+}
+
+class App extends Component<AppProps, AppState> {
+  constructor(props) {
+    super(props);
+    this.handleSearchChange = this.handleSearchChange.bind(this);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+    this.handleIdTypeChange = this.handleIdTypeChange.bind(this);
+    this.state = {
+      searchStr: '',
+      idType: IdentifierType.CUSIP
+    };
+  }
+
+  render() {
+    const viewData = this.state.security;
+    const hasViewData = !!(viewData);
+    const layout = hasViewData ? viewData.layout : null;
+    const calculatorData = hasViewData ? viewData.data : null;
+    return (
+      <div className="page">
+        <div className="cd-inline p-2 bg-dark text-white text-center">
+          <h2>Single Security Calculator</h2>
+        </div>
+
+        <div className="content">
+          <div className="left-col">
+            <SearchSec
+              onSearchChange={this.handleSearchChange}
+              onSearchSubmit={this.handleSearchSubmit}
+              onIdTypeChange={this.handleIdTypeChange}
+              idType={this.state.idType}
+              searchStr={this.state.searchStr}
+            />
+          </div>
+          <div className="right-col">
+            <Views viewData={this.state.security}/>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  handleSearchChange(e) {
+    this.setState({ searchStr: e.target.value });
+  }
+
+  handleIdTypeChange(e) {
+    this.setState({ idType: e.target.value });
+  }
+
+  handleSearchSubmit(e) {
+    e.preventDefault();
+    if (!this.state.searchStr.length) {
+      return;
+    }
+
+    axios
+      .get('/security', {
+        //baseURL:"/", //TODO make this more robust.
+        params: {
+          identifierType: this.state.idType,
+          id: this.state.searchStr,
+        },
+      })
+      .then(response => {
+        const viewData = response.data.data;
+        const calculatorData = viewData.data;
+        calculatorData.originSecurity = calculatorData.security;
+        calculatorData.security = calculatorData.security.attributes;
+        this.setState({security: viewData});
+      });
+  }
+
+}
+
+export default App;
