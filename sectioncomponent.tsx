@@ -27,7 +27,14 @@ export default class SectionComponent extends React.Component<
             data={this.props.data}
           />
         </div>
-        <div className="card-body text-center">{this.renderContent()}</div>
+        <div className="card-body text-center">
+      <table class="table table-bordered">
+				<tbody>
+                    {this.renderContent()}
+				</tbody>
+				</table>
+      
+      </div>
       </div>
     );
   }
@@ -42,9 +49,9 @@ export default class SectionComponent extends React.Component<
     return content.map((row, index) => {
       return (
         <div key={index}>
-          <span>{row.label}</span>
-          <span>{row.field}</span>
-        </div>
+                        <tr><td>{row.label}:</td>
+                        <td>{row.field}</td></tr>
+                        </div>);
       );
     });
   }
