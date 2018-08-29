@@ -56,3 +56,8 @@ export default class SectionComponent extends React.Component<
     });
   }
 }
+
+
+.table-bordered td,.table-bordered ,.table-bordered th{
+   border: none !important; border-right: none!important;
+}
