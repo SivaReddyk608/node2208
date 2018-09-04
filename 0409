@@ -1,0 +1,37 @@
+,expandCl:"visibleToggle"
+	,collapseCl:"hiddenToggle"
+	,toggletabHidden:"toggletabHidden"
+  
+  
+  
+  
+  
+  this.renderTabToggleButtons=this.renderTabToggleButtons.bind(this);
+	this.handlechangefunction=this.handlechangefunction.bind(this);
+  
+  
+  
+   renderTabToggleButtons(tab: Tab){
+	 var style = this.state.activeTabId == tab.id ?  "nav-item nav-link tabselected  bg-dark text-white" : " nav-item nav-link text-dark";
+  var styleh=this.state.activeTabId == tab.id ?  {color: "#8A2BE2"} : {color : "#778899"};
+    return (
+	<a key={tab.id} className={style} id={tab.id} onClick={()=>this.openTab(tab.id)} title={tab.description}>{tab.description}</a>
+      //<button key={tab.id} classNameName="bg-primary"  id={tab.id} onClick={()=>this.openTab(tab.id)} title={tab.description}>{tab.name}</button>
+    );
+  }
+   handlechangefunction(){
+	  if (this.state.expandCl=="visibleToggle"){
+		  
+		  this.setState({expandCl:"hiddenToggle"});
+		  this.setState({collapseCl:"visibleToggle"});
+		  this.setState({toggletabHidden:"toggletabvisible"});
+	}
+	
+	else{
+			this.setState({expandCl:"visibleToggle"});
+		  this.setState({collapseCl:"hiddenToggle"});
+		  this.setState({toggletabHidden:"toggletabHidden"});
+	}
+	
+	
+  }
