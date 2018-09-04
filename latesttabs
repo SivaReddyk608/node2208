@@ -1,0 +1,35 @@
+<Tabs tabs={this.getTabs(layout, this.props.viewData.data)} />
+
+<Tabs tabsfixed={this.getFixedTabs()} tabs={this.getTabs(layout, this.props.viewData.data)}
+
+
+
+getFixedTabs(): Tab[] {
+    return [
+      {
+        id: 'IND_DATA',
+        name: 'IND DATA',
+        description: 'Indicative Data',
+      },
+      {
+        id: 'PX_YIELD',
+        name: 'Px / Yield',
+        description: 'Pricing and Yield',
+      },
+      {
+        id: 'CASHFLOW',
+        name: 'Cashflows',
+        description: 'Cashflow',
+      },
+      {
+        id: 'VAR',
+        name: 'VaR',
+        description: 'Value at Risk',
+      },
+      {
+        id: 'STRESS',
+        name: 'Stress Test',
+        description: 'Stress Tests',
+      },
+    ];
+  }
