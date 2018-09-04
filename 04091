@@ -12,3 +12,40 @@
 					</div>
 					
 				</div>
+
+
+
+
+
+.visibleToggle{
+	display:block;
+	
+}
+  
+.toggletabvisible{
+	
+	display:block;
+}
+.toggletabHidden{
+	display:none;
+}
+.hiddenToggle{
+	display:none;
+	
+}
+ @media screen and (max-width: 600px) {
+  .tabvisible {display: none;}
+  .tabHidden { display: block;}
+   
+} 
+
+ @media screen and (min-width: 600px) {
+  .tabvisible { display: block;}
+  
+  .tabHidden {display: none;}
+   
+} 
+
+ 
+
+
