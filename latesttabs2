@@ -1,0 +1,4 @@
+{this.props.tabs.map(this.renderTabButtons)}
+
+
+{this.props.tabsfixed.map(this.renderTabButtons)}
