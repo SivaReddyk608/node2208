@@ -1,0 +1,8 @@
+              <div>
+                    <Header header={this.props.template.header} data={this.props.data}/>
+                </div>
+                <div>
+                {this.props.template.sections.map(value => {
+                    return (<Section key={value.name} section={value} data={this.props.data}></Section>);
+                })}
+                </div>
