@@ -1,0 +1,14 @@
+<div className="tabHidden">
+				<div className="bg-warning py-1 pl-3 text-left">
+						<h1><a className={this.state.expandCl} onClick={this.handlechangefunction}>&#43;</a></h1>
+				
+				
+						<h1><a className={this.state.collapseCl} onClick={this.handlechangefunction} >&#45;</a></h1>
+				</div>
+					<div className="bg-light"><div className={this.state.toggletabHidden}>
+					{this.props.tabs.map(this.renderTabToggleButtons)}
+					</div>
+					
+					</div>
+					
+				</div>
