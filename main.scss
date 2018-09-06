@@ -1,0 +1,22 @@
+$blue: #37617a;
+$red: #cb4f53;
+$gray-600: #dbd5cd;
+$green: #00ba6e;
+$cyan: #40c1bb;
+$yellow: #ffc107;
+$gray-100: #f8f9fa;
+$gray-800: #69727a;
+$myborder-width: 2px;
+$border-width: $myborder-width;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+);
+@import '../node_modules/bootstrap/scss/bootstrap';

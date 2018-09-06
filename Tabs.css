@@ -1,0 +1,42 @@
+.tab {
+  height: 100%;
+}
+.TabsSection {
+  width: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  border-right: 1px solid black;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: blueviolet;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  min-height: 92%;
+  height: auto;
+  overflow-y: auto;
+}
+.tabheader {
+  height: 8%;
+}
+.tabselected {
+  border-width: 3px !important;
+}
