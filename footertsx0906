@@ -1,0 +1,55 @@
+import * as React from 'react';
+import './styles/Footer.css';
+
+export interface Link {
+  Name: string;
+  urllink: string;
+}
+
+const cpRight: Link[] = [
+  {
+    Name: 'LEGAL ',
+    urllink: 'https://www.msci.com/terms-of-use',
+  },
+  {
+    Name: ' PRIVACY NOTICE ',
+    urllink: 'https://www.msci.com/privacy-pledge',
+  },
+  {
+    Name: ' COOKIES ',
+    urllink: 'https://www.msci.com/cookie-policy',
+  },
+  {
+    Name: ' CONTACT US ',
+    urllink: 'https://www.msci.com/contact-us',
+  },
+];
+
+class Footer extends React.PureComponent {
+  FooterLinks(ftlink: Link) {
+    console.log(ftlink.Name);
+    var style =
+      ftlink.Name == ' CONTACT US '
+        ? 'pl-1 text-white'
+        : 'pl-1 border-right text-white';
+    return (
+      <a key={ftlink.Name} className={style} href={ftlink.urllink}>
+        {ftlink.Name}
+      </a>
+    );
+  }
+
+  render() {
+    return (
+      <div className="row fixed-bottom py-2 text-white bg-dark">
+        <div className="col-sm-6  text-center">
+          © Copyright MSCI. All rights reserved
+        </div>
+        <div className="col-sm-6 text-center">
+          {cpRight.map(this.FooterLinks)}
+        </div>
+      </div>
+    );
+  }
+}
+export default Footer;
