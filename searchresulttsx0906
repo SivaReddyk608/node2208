@@ -1,0 +1,44 @@
+import React, { Component } from 'react';
+import './Search.css';
+import './main.scss';
+
+class InputForm extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="dsrchrslt">
+          <h3 className="hsrchrslt"> Search Result </h3>
+        </div>
+        <div>
+          <div className="dsglerslt">
+            <p className="psrchrslt"> Single Identifier will appear here</p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <td>Id</td>
+                  <td>Coupon</td>
+                  <td>Mat</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default InputForm;
