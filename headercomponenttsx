@@ -1,0 +1,48 @@
+import React from 'react'
+import parse from 'json-templates'
+import { CalculatorData, Header, ComplexHeader, SimpleHeader} from '../types';
+
+interface HeaderProps {
+    header: Header;
+    data: CalculatorData;
+}
+
+export default class HeaderComponent extends React.Component<HeaderProps, undefined> {
+    constructor(props: HeaderProps){
+        super(props);
+    }
+
+    render() {
+        if(!this.props.header){
+            return null;
+        }
+        if(this.isComplexHeader(this.props.header)){
+           return this.renderComplexHeader(this.props.header, this.props.data);
+        } else {
+           return this.renderSimpleHeader(this.props.header, this.props.data);
+        }
+    }
+
+    isComplexHeader(header: Header): header is ComplexHeader{  
+        return (header as ComplexHeader).title !== undefined;
+    }
+
+    renderSimpleHeader(header: SimpleHeader, data: CalculatorData) {
+        const template = parse(header);
+        const headTitle:string = template(data);
+        return <div>{headTitle}</div>;
+    }
+
+    renderComplexHeader(header: ComplexHeader, data: CalculatorData){
+        const template = parse(header.title);
+        const headTitle:string[] = template(data);
+        var className = "row justify-content-" + header.justification; 
+        return (
+            <div className={className}>
+                {headTitle.map((value, index) => {
+                    return (<div key={index} className="col">{value}</div>)
+                })}
+            </div>
+        );
+    }
+}
