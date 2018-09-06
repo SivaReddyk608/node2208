@@ -1,0 +1,40 @@
+import React from 'react'
+import { CalculatorData, Layout, ViewData} from '../types';
+import Tabs from '../tabsDir/Tabs';
+import { Tab } from '../tabsDir/types';
+import ViewComponent from './ViewComponent';
+
+interface ViewsProps {
+    viewData: ViewData
+}
+
+export default class ViewsComponent extends React.Component<ViewsProps, undefined> {
+    constructor(props: ViewsProps){
+        super(props);
+    }
+
+    render() {
+        const layout = !this.props.viewData ? null :  this.props.viewData.layout;
+        let viewTabs;
+        if(!(layout) || !(layout.views)){
+            viewTabs = null;
+        } else {
+            viewTabs = (
+                <Tabs tabs={this.getTabs(layout, this.props.viewData.data)} />
+                
+            );
+        }
+
+        return viewTabs;
+    }
+
+    getTabs(layout: Layout, data:CalculatorData ): Tab[] {
+        return layout.views.map(view =>{
+            return {id: view.name, name: view.name, 
+                description: view.description, 
+                content:<ViewComponent template={view} data={data}/>
+            }
+        });
+    }
+        
+}
