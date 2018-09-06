@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MSCI-SSC</title>
+    <link rel="stylesheet" href="../resources/webapp/dist/app.css" />
+</head>
+
+<body>
+    <div id="app"></div>
+    <h1>MSCI-SSC</h1>
+    <script src="../resources/webapp/dist/App.js"></script>
+</body>
+
+</html>
