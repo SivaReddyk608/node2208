@@ -1,0 +1,11 @@
+.footercp {
+  padding-left: 15px;
+  width: 40%;
+  float: left;
+  margin-top: 15px;
+}
+.footerlnk {
+  width: 60%;
+  float: right;
+  margin-top: 15px;
+}
