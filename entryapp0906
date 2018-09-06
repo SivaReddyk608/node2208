@@ -1,0 +1,12 @@
+export const Search = Identifier => {
+  return {
+    Identifier: Identifier,
+  };
+};
+
+export const ShowTbs = alltabs => {
+  return {
+    type: 'ShowTbs',
+    tabs: alltabs,
+  };
+};
