@@ -1,0 +1,13 @@
+import { connect } from 'react-redux';
+import { Search } from '../action';
+import Tabs from '../tabsDir/Tabs';
+
+const mapStateToProps = state => {
+  return {
+    Tabsdata: state.Tabs,
+  };
+};
+
+const TabsContainer = connect(mapStateToProps)(Tabs);
+
+export default TabsContainer;
