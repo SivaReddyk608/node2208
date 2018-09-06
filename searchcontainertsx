@@ -1,0 +1,26 @@
+import { connect } from 'react-redux';
+import { ShowTbs } from '../action';
+import inputform from '../search/inputform';
+
+const mapStateToProps = state => {
+  return {
+    Identifier: state.Identifier.Identifier,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    OnSearch: Tabs => {
+      console.log('new log in container');
+
+      dispatch(ShowTbs(Tabs));
+    },
+  };
+};
+
+const SearchContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(inputform);
+
+export default SearchContainer;
